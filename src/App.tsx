@@ -5,6 +5,7 @@ import RegisterPage from "./pages/auth/pages/RegisterPage";
 import ForgotPasswordPage from "./pages/auth/pages/ForgotPasswordPage";
 import VerifyAccountPage from "./pages/auth/pages/VerifyAccountPage";
 import OtpPage from "./pages/auth/pages/OtpPage";
+import { Toaster } from "react-hot-toast";
 
 export const router = createBrowserRouter([
 
@@ -36,7 +37,12 @@ export const router = createBrowserRouter([
 ]);
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <Toaster position="top-center" />
+      <RouterProvider router={router} />
+    </>
+  )
 };
 
 export default App;
