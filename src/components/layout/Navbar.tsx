@@ -1,5 +1,6 @@
 import { Bell, Heart } from "lucide-react";
 import navbar_logo from "../../assets/navbar_logo.png";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="flex items-center justify-between px-6 py-4 bg-white border-b border-gray-100 sticky top-0 z-50">
@@ -10,13 +11,13 @@ const Navbar = () => {
 
       {/* 2. Navigation Links */}
       <ul className="hidden md:flex items-center gap-8 text-gray-600 font-medium">
-        <li className="hover:text-[#0D6C71] cursor-pointer transition">Home</li>
+        <Link to="/" className="hover:text-[#0D6C71] cursor-pointer transition">Home</Link>
         <li className="hover:text-[#0D6C71] cursor-pointer transition">
           Find Doctors
         </li>
-        <li className="hover:text-[#0D6C71] cursor-pointer transition">
+        <Link to="/online_consultation" className="hover:text-[#0D6C71] cursor-pointer transition">
           Online Consultation
-        </li>
+        </Link>
       </ul>
 
       {/* 3. Icons Section (Now in Green) */}

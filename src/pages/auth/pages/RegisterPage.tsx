@@ -24,15 +24,13 @@ export default function RegisterPage() {
     console.log(data);
     toast.success(' Register Successfully!')
     reset();
-    setTimeout(() => {
-      navigate("/login");
-    }, 1000);
+    navigate("/login");
   };
 
 
   return (
 
-    <AuthLayout paddingY={10}>
+    <AuthLayout paddingY={16}>
 
       <AuthHeader title="Registration" subtitle="Here you can create your new account" />
 
