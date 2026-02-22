@@ -9,17 +9,23 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchema, type LoginSchema } from "../validation/auth.schema";
 import RememberMe from "../components/RememberMe";
 import SocialButtons from "../components/SocialButtons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 
 export default function LoginPage() {
 
-  const { register, handleSubmit, formState: { errors }, } = useForm<LoginSchema>({
+  const navigate = useNavigate();
+
+  const { register, handleSubmit, reset, formState: { errors }, } = useForm<LoginSchema>({
     resolver: zodResolver(loginSchema),
   });
 
   const onSubmit = (data: LoginSchema) => {
     console.log(data);
+    toast.success(' Login Successfully!')
+    reset();
+    navigate("/");
   };
 
   return (

@@ -2,8 +2,14 @@
 import { RouterProvider } from "react-router-dom";
 import { router } from "./router/router";
 
+import { Toaster } from "./components/ui/sonner";
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <Toaster position="top-center" />
+      <RouterProvider router={router} />
+    </>
+  );
 };
 
 export default App;

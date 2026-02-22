@@ -31,7 +31,7 @@ export const verifyAccountSchema = z.object({
 });
 
 export const otpSchema = z.object({
-  otp: z.string().min(4, "OTP must be 4 digits")
+  otp: z.string().min(1, "OTP is required").length(4, "OTP must be 4 digits"),
 });
 
 export type LoginSchema = z.infer<typeof loginSchema>;

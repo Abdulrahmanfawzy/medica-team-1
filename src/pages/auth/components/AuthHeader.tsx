@@ -1,4 +1,3 @@
-
 import img from "@/assets/auth-logo.png"
 
 type Props = {
@@ -8,6 +7,15 @@ type Props = {
 };
 
 export default function AuthHeader({ title, subtitle, otptime }: Props) {
+
+  const formatTime = (seconds: number) => {
+    const minutes = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${minutes.toString().padStart(2, "0")}:${secs
+      .toString()
+      .padStart(2, "0")}`;
+  };
+
   return (
     <div className="text-center w-full max-w-2xs mx-auto mb-4">
 
@@ -23,9 +31,11 @@ export default function AuthHeader({ title, subtitle, otptime }: Props) {
         {subtitle}
       </p>
 
-      {
-        otptime && <span className="text-center text-gray-500 ">Time Left: {otptime}</span>
-      }
+      {otptime !== undefined && (
+        <span className="text-center text-gray-500 block">
+          Time Left: {formatTime(otptime)}
+        </span>
+      )}
 
     </div>
   );
