@@ -8,17 +8,25 @@ import { AlertCircle, Mail, User } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { registerSchema, type RegisterSchema } from "../validation/auth.schema";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 
 export default function RegisterPage() {
 
-  const { register, handleSubmit, formState: { errors }, } = useForm<RegisterSchema>({
+  const navigate = useNavigate();
+
+  const { register, handleSubmit, reset, formState: { errors }, } = useForm<RegisterSchema>({
     resolver: zodResolver(registerSchema),
   });
 
   const onSubmit = (data: RegisterSchema) => {
     console.log(data);
+    toast.success(' Register Successfully!')
+    reset();
+    setTimeout(() => {
+      navigate("/login");
+    }, 1000);
   };
 
 
