@@ -7,7 +7,7 @@ export default function onlineConsultation() {
                 Doctors Available Online
             </h2>
             <div className="flex justify-between items-center gap-5 flex-wrap my-4">
-                <div className="md:flex grid grid-cols-2 gap-3">
+                <div className="md:flex grid grid-cols-2 gap-3 flex-wrap">
                     <Button text="Filter by Specialty" />
                     <Button
                         text="Filter by Location"
@@ -23,6 +23,7 @@ export default function onlineConsultation() {
                     <Button
                         text="Availability"
                         DropdownMenuItemText={["Available", "Not Available"]}
+                        
                     />
                 </div>
                 <Button
