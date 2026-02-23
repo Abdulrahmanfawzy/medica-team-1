@@ -20,8 +20,7 @@ export default function RegisterPage() {
     resolver: zodResolver(registerSchema),
   });
 
-  const onSubmit = (data: RegisterSchema) => {
-    console.log(data);
+  const onSubmit = () => {
     toast.success(' Register Successfully!')
     reset();
     navigate("/login");

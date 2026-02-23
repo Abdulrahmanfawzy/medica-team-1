@@ -10,13 +10,7 @@ type Props = {
   error?: FieldError;
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
-export default function AuthInput({
-  icon: Icon,
-  label,
-  placeholder,
-  type = "text",
-  error,
-  ...props }: Props) {
+export default function AuthInput({ icon: Icon, label, placeholder, type = "text", error, ...props }: Props) {
 
   return (
 

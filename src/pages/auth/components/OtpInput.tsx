@@ -8,7 +8,7 @@ type Props = {
   error?: string;
 };
 
-export default function OtpInput({ length = 4, onChange, error, }: Props) {
+export default function OtpInput({ length = 4, onChange, error, value }: Props) {
 
   const inputs = useRef<HTMLInputElement[]>([]);
   const triggerChange = () => {
@@ -54,6 +54,13 @@ export default function OtpInput({ length = 4, onChange, error, }: Props) {
     inputs.current[paste.length - 1]?.focus();
     triggerChange();
   };
+
+  useEffect(() => {
+    if (!value) return;
+    value.split("").forEach((char, index) => {
+      if (inputs.current[index]) inputs.current[index].value = char;
+    });
+  }, [value]);
 
   useEffect(() => {
     inputs.current[0]?.focus();

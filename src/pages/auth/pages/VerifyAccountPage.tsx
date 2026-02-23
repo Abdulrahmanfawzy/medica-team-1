@@ -6,19 +6,22 @@ import { Phone } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { verifyAccountSchema, type VerifyAccountSchema, } from "../validation/auth.schema";
+import { useNavigate } from "react-router-dom";
 
 
 export default function VerifyAccountPage() {
 
-  const { register, handleSubmit, formState: { errors }, } =
-    useForm<VerifyAccountSchema>({
-      resolver:
-        zodResolver(verifyAccountSchema),
-    });
+  const navigate = useNavigate();
 
+  const { register, handleSubmit, reset, formState: { errors }, } = useForm<VerifyAccountSchema>({
+    resolver:
+      zodResolver(verifyAccountSchema),
+  });
 
   const onSubmit = (data: VerifyAccountSchema) => {
     console.log(data);
+    reset();
+    navigate("/login");
   };
 
 

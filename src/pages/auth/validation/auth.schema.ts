@@ -7,11 +7,13 @@ export const loginSchema = z.object({
 });
 
 export const registerSchema = z.object({
-  name: z.string().min(3),
-  email: z.string().email(),
-  password: z.string().min(6),
-  confirmPassword: z.string(),
-  agree: z.boolean()
+  name: z.string().min(3, "Name must be at least 3 characters"),
+  email: z.string().email("Invalid email"),
+  password: z.string().min(6, "Password must be at least 6 characters"),
+  confirmPassword: z.string().min(6, "Confirm password is required"),
+  agree: z.boolean().refine(val => val === true, {
+    message: "You must agree to terms"
+  })
 }).refine(
 
   (data) => data.password === data.confirmPassword,

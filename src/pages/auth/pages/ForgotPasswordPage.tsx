@@ -13,15 +13,13 @@ export default function ForgotPasswordPage() {
 
   const navigate = useNavigate();
 
-  const { register, handleSubmit, formState: { errors }, } =
-    useForm<ForgotPasswordSchema>({
-      resolver:
-        zodResolver(forgotPasswordSchema),
-    });
+  const { register, handleSubmit, formState: { errors }, } = useForm<ForgotPasswordSchema>({
+    resolver:
+      zodResolver(forgotPasswordSchema),
+  });
 
 
-  const onSubmit = (data: ForgotPasswordSchema) => {
-    console.log(data);
+  const onSubmit = () => {
     toast.success(' Successfully!')
     setTimeout(() => {
       navigate("/otp");

@@ -21,8 +21,7 @@ export default function LoginPage() {
     resolver: zodResolver(loginSchema),
   });
 
-  const onSubmit = (data: LoginSchema) => {
-    console.log(data);
+  const onSubmit = () => {
     toast.success(' Login Successfully!')
     reset();
     navigate("/");

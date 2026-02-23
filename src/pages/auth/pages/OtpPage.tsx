@@ -32,7 +32,6 @@ export default function OtpPage() {
   });
 
   const onSubmit = (data: OtpSchema) => {
-    console.log(data);
     if (data.otp === "1234") {
       clearErrors("otp");
       setSuccess("Valid OTP ");
@@ -54,7 +53,7 @@ export default function OtpPage() {
     reset();
     setSuccess("");
   };
-
+  
   return (
 
     <AuthLayout>
