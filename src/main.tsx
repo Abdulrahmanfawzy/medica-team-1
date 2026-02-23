@@ -7,9 +7,9 @@ import { createRoot } from "react-dom/client";
 // import "@fontsource/poppins/600.css";
 // import "@fontsource/poppins/700.css";
 
-import "./index.css";
 // import DataProvider from "./hooks/useHooks.tsx";
 // import { BrowserRouter } from "react-router-dom";
+import "./index.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
