@@ -2,6 +2,7 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+<<<<<<< HEAD
 @custom-variant dark (&:is(.dark *));
 
 @font-face {
@@ -344,3 +345,5 @@
     max-width: 91rem /* 1536px */;
   }
 }
+=======
+>>>>>>> dev
