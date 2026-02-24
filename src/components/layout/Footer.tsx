@@ -1,4 +1,3 @@
-import React from "react";
 // Note: You can replace these icons with Lucide-React or FontAwesome
 import { FaTwitter, FaFacebookF, FaInstagram } from "react-icons/fa";
 
