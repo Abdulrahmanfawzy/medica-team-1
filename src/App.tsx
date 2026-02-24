@@ -1,7 +1,7 @@
-import React from "react";
+import DoctorProfile from "./pages/doctorProfile/DoctorProfile";
 
 const App = () => {
-  return <div>App</div>;
+  return <DoctorProfile />;
 };
 
 export default App;

@@ -116,6 +116,11 @@
 }
 
 :root {
+  /* project colors */
+  --primary-color: #097178;
+  --white-text-color: #fcfcfc;
+  --border-color: #b3b3b3;
+  --primary-text: #07595f;
   /* Gray scale */
   /* text-color */
   --text-primary-gray: #111928;

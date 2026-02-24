@@ -1,4 +1,3 @@
-import DataProvider from "./hooks/usecontext.tsx";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 // import "@fontsource/poppins/400.css";
