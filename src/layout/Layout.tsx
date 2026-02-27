@@ -22,7 +22,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     minHeight: "100vh",
-  },
+  }as const,
   main: {
     flex: 1,
     padding: "20px",

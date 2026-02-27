@@ -10,6 +10,8 @@ import OtpPage from "../pages/auth/pages/OtpPage";
 import OnlineConsultation from "@/pages/online_consultation/page.tsx";
 import WaitingRoom from "@/pages/online_consultation/Components/waiting_room/page";
 import VideoCall from "@/pages/online_consultation/videoCall/page";
+import FindDoctor from "@/pages/findDoctor/FindDoctor";
+
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +29,10 @@ export const router = createBrowserRouter([
       {
         path: "/video_call",
         element: <VideoCall />
+      },
+      {
+        path: "/find_doctor",
+        element: <FindDoctor />
       }
     ],
   },
