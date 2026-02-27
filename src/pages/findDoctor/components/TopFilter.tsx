@@ -8,14 +8,14 @@ import {
 import { Button } from "@/components/ui/button";
 const TopFilter = () => {
   return (
-    <aside className="bg-[#F2F2F2] h-[152px] w-full flex justify-center items-center">
-      <div className="flex flex-row gap-4 w-[90%]">
+    <aside className="py-6 bg-[#F2F2F2] min-h-[152px] w-full flex justify-center items-center">
+      <div className="flex flex-wrap justify-center gap-3 w-[90%]">
         <InputGroup
           className=" border
                             focus-within:ring-0
                             focus-within:ring-transparent
                             focus-within:border-[#000000]
-                           h-10 md:h-14  w-full md:max-w-[588px] py-3 
+                           h-12 md:h-14 min-w-full w-full md:w-[470px] py-3 md:min-w-0
                            outline-none rounded-[10px] border-[#B3B3B3] bg-white"
         >
           <InputGroupInput
@@ -31,7 +31,7 @@ const TopFilter = () => {
           className=" border
                             focus-within:ring-0
                             focus-within:ring-transparent
-                            focus-within:border-[#000000] h-10 md:h-14 w-full md:max-w-52 py-3 rounded-[10px]
+                            focus-within:border-[#000000] h-12 md:h-14 min-w-full w-full md:w-52 md:min-w-0 py-3 rounded-[10px]
                              border-[#B3B3B3]  bg-white"
         >
           <InputGroupInput
@@ -46,7 +46,7 @@ const TopFilter = () => {
         <Button
           size={"sm"}
           variant={"outline"}
-          className="flex justify-evenly gap-2 h-10 md:h-14 w-full md:max-w-[192px] py-3 px-10  rounded-[10px] font-semibold"
+          className="flex justify-center md:justify-evenly  gap-2 h-10 md:h-14 w-[50%] md:max-w-[192px] py-3 px-10  rounded-[10px] font-semibold"
         >
           <ListFilter />
           Filter
@@ -55,7 +55,7 @@ const TopFilter = () => {
         <Button
           size={"sm"}
           variant={"outline"}
-          className="flex justify-evenly gap-2 h-10 md:h-14 w-full md:max-w-[192px] py-3 px-10  rounded-[10px] font-semibold"
+          className="flex justify-center md:justify-evenly gap-2 h-10 md:h-14 w-[50%] md:max-w-[192px] py-3 px-10  rounded-[10px] font-semibold"
         >
           <RefreshCcw />
           Refresh
