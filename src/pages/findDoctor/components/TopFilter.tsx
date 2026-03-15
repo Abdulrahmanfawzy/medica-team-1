@@ -8,7 +8,7 @@ import {
 import { Button } from "@/components/ui/button";
 const TopFilter = () => {
   return (
-    <aside className="py-6 bg-[#F2F2F2] min-h-[152px] w-full flex justify-center items-center">
+    <div className="py-6 bg-[#F2F2F2] min-h-[152px] w-full flex justify-center items-center">
       <div className="flex flex-wrap justify-center gap-3 w-[90%]">
         <InputGroup
           className=" border
@@ -61,7 +61,7 @@ const TopFilter = () => {
           Refresh
         </Button>
       </div>
-    </aside>
+    </div>
   );
 };
 
