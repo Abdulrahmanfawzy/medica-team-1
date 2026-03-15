@@ -12,9 +12,7 @@ const Navbar = () => {
       {/* 2. Navigation Links */}
       <ul className="hidden md:flex items-center gap-8 text-gray-600 font-medium">
         <Link to="/" className="hover:text-[#0D6C71] cursor-pointer transition">Home</Link>
-        <li className="hover:text-[#0D6C71] cursor-pointer transition">
-          Find Doctors
-        </li>
+        <Link to="/find_doctor" className="hover:text-[#0D6C71] cursor-pointer transition">Find Doctors</Link>
         <Link to="/online_consultation" className="hover:text-[#0D6C71] cursor-pointer transition">
           Online Consultation
         </Link>
